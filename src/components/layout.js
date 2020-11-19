@@ -3,6 +3,9 @@ import { Link } from 'gatsby'
 import base from './base.css'
 import Container from './container'
 import Navigation from './navigation'
+import Search from './Search'
+
+const searchIndices = [{ name: `gatsby-test` }]
 
 class Template extends React.Component {
   render() {
@@ -17,6 +20,7 @@ class Template extends React.Component {
     return (
       <Container>
         <Navigation />
+        <Search indices={searchIndices} />
         {children}
       </Container>
     )
